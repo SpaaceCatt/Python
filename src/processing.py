@@ -1,4 +1,7 @@
-def filter_by_state(data: list[dict[str, any]], state: str = "EXECUTED") -> list[dict[str, any]]:
+from typing import Any
+
+
+def filter_by_state(data: list[dict[str, Any]], state: str = "EXECUTED") -> list[dict[str, Any]]:
     """Возвращает список словарей с указанным состоянием."""
     return [item for item in data if item.get("state") == state]
 
